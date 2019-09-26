@@ -19,11 +19,11 @@ stages:
     displayName: Build
     pool:
       vmImage: 'ubuntu-latest'
-    steps:
-       
-            - task: Docker@2
-            inputs:
-              containerRegistry: 'toto'
-              repository: 'haoussine-apps-dovps'
-              command: 'buildAndPush'
-              Dockerfile: '**/Dockerfile'
+    steps:      
+    
+    - task: Docker@2      
+      inputs:
+          containerRegistry: 'toto'
+          repository: 'haoussine-apps-dovps'
+          command: 'buildAndPush'
+          Dockerfile: '**/Dockerfile'
